@@ -1,10 +1,9 @@
-#usr/bin/bash
-# traitement de l'année 2016, on crée on écrase le fichier sortie.txt
-echo "pour l'année 2016" > sortie.txt
-grep "Location" 2016*.ann | wc -l >> sortie.txt
-# traitement de l'année 2017, on écrit à la suite du fichier
-echo "pour l'année 2017" >> sortie.txt
-grep "Location" 2017*.ann | wc -l >> sortie.txt
-# traitement de l'année 2018, on écrit à la suite du fichier
-echo "pour l'année 2018" >> sortie.txt
-grep "Location" 2018*.ann | wc -l >> sortie.txt
+#!/usr/bin/zsh
+#Ce script sert à donner le nombre de location par année
+
+echo "Nombre de Location pour 2016 est :" > sortie.txt
+grep "Location" 2016*.ann |wc -l >> sortie.txt
+echo "Nombre de Location pour 2017 est :" >> sortie.txt
+grep "Location" 2017*.ann |wc -l >> sortie.txt
+echo "Nombre de Location pour 2018 est :" >> sortie.txt
+grep "Location" 2018*.ann |wc -l >> sortie.txt
