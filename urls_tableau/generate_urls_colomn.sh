@@ -24,28 +24,28 @@ echo "
 		<body>
 			<table>
 				<thead>
-					<tr><th>ligne</th><th>encodage</th><th>code</th><th>URL</th>
+					<tr><th>ligne</th><th>encodage</th><th>code</th><th>URL</th><th>Fois</th>
 					</tr>
 				</thead>
 " > $fichier_tableau
 linenum=1;
 while read -r line;
 do
-if 	encodage=$(curl -I -s $line | egrep  "charset=\S+" | egrep -o "=\S+" | egrep -o "[^=]+")
-then 
-	encodage=$(curl -I -s $line | egrep  "charset=\S+" | egrep -o "=\S+" | egrep -o "[^=]+")
-else
-	encodage="Not referred"
-fi
-header=$(curl -I -s $line | egrep "^HTTP" | egrep -o "[0-9]{3}")
-	echo "
-		<tr><td>$linenum</td><td>$encodage</td><td>$header</td><td>$line</td></tr>
-			" >> $fichier_tableau;
-	linenum=$((linenum+1));
+	if 	encodage=$(curl -I -s $line | egrep  "charset=\S+" | egrep -o "=\S+" | egrep -o "[^=]+")
+	then 
+		encodage=$(curl -I -s $line | egrep  "charset=\S+" | egrep -o "=\S+" | egrep -o "[^=]+")
+	else
+		encodage="Not referred"
+	fi
+	header=$(curl -I -s $line | egrep "^HTTP" | egrep -o "[0-9]{3}")
+	fois=$(w3m -cookie $line | egrep "种族歧视" -wc)
+		echo "
+			<tr><td>$linenum</td><td>$encodage</td><td>$header</td><td>$line</td><td>$fois</td></tr>
+				" >> $fichier_tableau;
+		linenum=$((linenum+1));
 done < $fichier_urls
 
-
-
+############################################################
 echo "</table></body></html>" >> $fichier_tableau
 echo "Traitement terminé."
 exit
