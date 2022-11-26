@@ -12,6 +12,40 @@
 fichier_urls=$1 # le fichier d'URL en entrée
 fichier_tableau=$2 # le fichier HTML en sortie
 
+lignenum=1;
+fich=$(basename -s .txt $fichier_urls)
+while read URL;
+do
+	cd /Users/xiaohua/Desktop/Cours/PPE/seances/seance8/aspirations
+	curl -o $fich-$lignenum.html $URL
+	cd /Users/xiaohua/Desktop/Cours/PPE/seances/seance8/dumps-text
+	w3m $URL > $fich-$lignenum.txt
+	lignenum=$((lignenum+1));
+
+done < $fichier_urls
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 if [[ $# -ne 2 ]]
 then
 	echo "Ce programme demande exactement deux arguments."

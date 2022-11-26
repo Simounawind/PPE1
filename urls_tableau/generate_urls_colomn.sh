@@ -35,7 +35,7 @@ do
 	then 
 		encodage=$(curl -I -s $line | egrep  "charset=\S+" | egrep -o "=\S+" | egrep -o "[^=]+")
 	else
-		encodage="Not referred"
+		encodage="\t utf-8 defaut"
 	fi
 	header=$(curl -I -s $line | egrep "^HTTP" | egrep -o "[0-9]{3}")
 	fois=$(w3m -cookie $line | egrep "种族歧视" -wc)
