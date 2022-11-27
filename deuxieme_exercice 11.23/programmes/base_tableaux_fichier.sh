@@ -10,40 +10,7 @@
 #===============================================================================
 
 fichier_urls=$1 # le fichier d'URL en entrée
-
-lignenum=1;
-fich=$(basename -s .txt $fichier_urls)
-while read URL;
-do
-	cd /Users/xiaohua/Desktop/Cours/PPE/PPE1/deuxieme_exercice\ 11.23/aspirations
-	curl -o fich-$lignenum.html $URL
-	cd /Users/xiaohua/Desktop/Cours/PPE/PPE1/deuxieme_exercice\ 11.23/dumps-text/
-	w3m $URL > fich-$lignenum.txt
-	lignenum=$((lignenum+1));
-
-done < $fichier_urls
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+fichier_tableau=$2 # le fichier HTML en sortie
 
 if [[ $# -ne 2 ]]
 then
@@ -86,9 +53,9 @@ while read -r URL; do
 	if [[ $code -eq 200 ]]
 	then
 		dump=$(lynx -dump -nolist -assume_charset=$charset -display_charset=$charset $URL)
-		if [[ $charset -ne "UTF-8" && -n "$dump" ]]
+		if [[ $charset -ne "UTF-8" && -n "$dump" ]] #command1 && command2  只有前面命令执行成功，后面命令才继续执行    -n  表示if [ -n str1 ]　　　　　　 当串的长度大于0时为真(串非空) 
 		then
-			dump=$(echo $dump | iconv -f $charset -t UTF-8//IGNORE)
+			dump=$(echo $dump | iconv -f $charset -t UTF-8//IGNORE)  #也就是说，如果检查出其编码信息不为空，且不等于utf8时，就要把它转成utf8
 		fi
 	else
 		echo -e "\tcode différent de 200 utilisation d'un dump vide"
