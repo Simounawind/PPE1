@@ -27,14 +27,16 @@ echo "<html><body>" > $fichier_tableau
 echo "<h2>Tableau $basename :</h2>" >> $fichier_tableau
 echo "<br/>" >> $fichier_tableau
 echo "<table>" >> $fichier_tableau
-echo "<tr><th>ligne</th><th>code</th><th>URL</th><th>Encodage</th><th>dump html</th><th>dumt text</th></tr>" >> $fichier_tableau
-
+echo "<tr><th>ligne</th><th>code</th><th>URL</th><th>Encodage</th><th>Concordances</th></tr>" >> $fichier_tableau
+#<th>dump html</th><th>dumt text</th></tr>
 lineno=1;
 while read -r URL; do
 	echo -e "\tURL : $URL";
 	# la façon attendue, sans l'option -w de cURL
 	code=$(curl -ILs $URL | grep -e "^HTTP/" | grep -Eo "[0-9]{3}" | tail -n 1)
-	charset=$(curl -Ls $URL | grep -Eo "charset=(\w|-)+" |tail | cut -d= -f2)
+	charset=$(curl -Ls $URL | grep -Eo "charset=(\w|-)+" |tail | cut -d= -f2 |tail -n 1)
+	concordance=$(w3m -cookie $URL | egrep "种族歧视" -wc)
+
 
 	# autre façon, avec l'option -w de cURL
 	# code=$(curl -Ls -o /dev/null -w "%{http_code}" $URL)
@@ -63,7 +65,7 @@ while read -r URL; do
 		charset=""
 	fi
 	# echo "$dump" > ""fich-$lineno.txt" 
-	echo "<tr><td>$lineno</td><td>$code</td><td><a href=\"$URL\">$URL</a></td><td>$charset</td></tr>" >> $fichier_tableau
+	echo "<tr><td>$lineno</td><td>$code</td><td><a href=\"$URL\">$URL</a></td><td>$charset</td><td>$concordance</td></tr>" >> $fichier_tableau
 	echo -e "\t----------------------------------------------------------------"
 	lineno=$((lineno+1));
 done < $fichier_urls
