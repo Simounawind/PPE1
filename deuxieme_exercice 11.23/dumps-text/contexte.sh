@@ -4,47 +4,44 @@
 
 #---TRAITEMENT---
 echo "
+<!DOCTYPE html>
 <html>
-		<head>
-		<meta charset=\"UTF-8\" />
-		<title>Tableaux</title>
-		</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contexte</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  </head>
 		<body>
 			<table>
 				<thead>
-					<tr><th>Contexte droit</th><th>Mot</th><th>Contexte gauche</th>
-					</tr>
-				</thead>" >new.html
-num=1
+					<tr>
+    				<th class=\"has-text-right\">Contexte droit</th>
+   					<th>Cible</th>
+    				<th class=\"has-text-left\">Contexte gauche</th>
+  					</tr>
+				</thead>
+				<tbody>
+" > sorti.html
+
 i=1
+cible="种族歧视"
 while ((i <= 52))
 do
     dossier=fich-$i.txt
-    echo "$dossier"
-    
-    egrep -o "[^，。？！]+种族歧视" $dossier | sort |
-    # echo "$cible_avant" > transf.txt
-    while read -r before
-    do
-        echo "<tr><td>$before</td></tr>" >> new.html
-    done
-
-
+	echo "$dossier"
+	egrep -o "(\w|\W){0,10}($cible)(\W|\w){0,10}" $dossier | sed -E "s/(.*)($cible)(.*)/<tr><td class=\"has-text-centered\">\1<\/td><td class=\"has-text-centered\"><strong>\2<\/strong><\/td><td <td class=\"has-text-centered\">\3<\/td><\/tr>/" >> sorti.html
     i=$((i+1));
 done
-
-
-
-# do
-#     echo "<tr><td>$before</td></tr>" >>new.html
-# done < $fichier_urls
-
-cible=$(egrep -o "种族歧视 |sort " $dossier)
-cible_apres=$(egrep -o "种族歧视.+[，。？！][^，。？！]+ |sort " $dossier)
-echo "<tr><td>$cible_avant</td><td><strong>$cible</strong></td><td>$cible_apres</td></tr>" >>new.html
-i=$((i+1));
-num=$((num+1))
-# done
-echo "</table></body></html>" >> new.html
-echo "Traitement terminé." >> new.html
 exit
+
+echo "
+</tbody>
+</table>
+</body>
+</html>
+" >> sorti.html
+
+
+#
+
