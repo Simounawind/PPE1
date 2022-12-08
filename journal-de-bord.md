@@ -53,9 +53,9 @@ Etudes des commandes html5
 
 ## 11.23   / S8
 
-Environs 10 commits pendant cette période, j'ai appris CSS et l'application de Bulma, aussi j'ai crée mon site, y ajoute les informations basiques de mon tableau. C'est très intéressant ! 
+Environs 10 commits pendant cette période, j'ai appris CSS et l'application de Bulma, aussi j'ai crée mon site([index.html](https://github.com/Simounawind/PPE1/blob/main/index.html)), y ajoute les informations basiques de mon tableau. C'est très intéressant ! 
 
-<img src="/Users/xiaohua/Desktop/Cours/PPE/PPE1/assets/image-20221208221342899.png" alt="image-20221208221342899" style="zoom:50%;" />
+
 
 
 
@@ -67,10 +67,9 @@ Aujourd'hui on m'a appris l'iTrameur mais j'ai pas encore l'étudier parce que j
 
 J'aime bien les trucs ! de sorte que je travaille jusqu'à 2:00-3:00 pour réaliser ce qu'il faut faire ! So far so good. 
 
-<img src="/Users/xiaohua/Desktop/Cours/PPE/PPE1/assets/image-20221208223949546.png" alt="image-20221208223949546" style="zoom:33%;" />
+
 
 ## 12.7	/S10
 
-J'ai soumis plusiers versions de 7/12 et de 8/12, dans lesquelles j'ai amélioré le tableau, et basé sur l'interface du prof, j'ai fait le site de notre groupe ([index.html](https://github.com/gemmafelton/PPE-group/blob/main/index.html)). En plus j'ai ajouté 3 colomns : dumps-texts et HTML et concordances. Ce que je dois faire ensuite, c'est de savoir ce que signifie le contexte et comment le tirer et l'ajouter dans le tableau. Et enfin il faut associer et aider les membres de mon groupe, travailler ensemble pour achever le projet !!
+J'ai soumis plusiers versions de 7/12 et de 8/12, dans lesquelles j'ai amélioré le tableau, et basé sur l'interface du prof, j'ai fait le site de notre groupe ([index.html](https://github.com/gemmafelton/PPE-group/blob/main/index.html)). En plus j'ai ajouté 3 colomns : [dumps-text](https://github.com/Simounawind/PPE1/tree/main/deuxieme_exercice 11.23/dumps-text) et [HTML](https://github.com/Simounawind/PPE1/tree/main/deuxieme_exercice 11.23/aspirations) et [concordances](https://github.com/Simounawind/PPE1/tree/main/deuxieme_exercice 11.23/concordances). Ce que je dois faire ensuite, c'est de savoir ce que signifie le contexte et comment le tirer et l'ajouter dans le tableau. Et enfin il faut associer et aider les membres de mon groupe, travailler ensemble pour achever le projet !!
 
-<img src="/Users/xiaohua/Desktop/Cours/PPE/PPE1/assets/image-20221208223933623.png" alt="image-20221208223933623" style="zoom: 20%;" />
