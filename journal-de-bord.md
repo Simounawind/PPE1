@@ -44,3 +44,33 @@ J'ai appris les commandes shell grep, cat, etc.
 ## 11.16	/S7
 
 Etudes des commandes html5
+
+
+
+
+
+
+
+## 11.23   / S8
+
+Environs 10 commits pendant cette période, j'ai appris CSS et l'application de Bulma, aussi j'ai crée mon site, y ajoute les informations basiques de mon tableau. C'est très intéressant ! 
+
+<img src="/Users/xiaohua/Desktop/Cours/PPE/PPE1/assets/image-20221208221342899.png" alt="image-20221208221342899" style="zoom:50%;" />
+
+
+
+
+
+## 11.30   / S9
+
+Aujourd'hui on m'a appris l'iTrameur mais j'ai pas encore l'étudier parce que je dois d'abord essayer de créer les dump-texts et les fichiers aspirés. Dans le dossier `deuxieme_exercice 11.23` J'ai réussi à créer ces fichiers avec un script qui s'appelle `dumps_aspirations.sh` . Et avec le script que le prof nous a donné, j'ai modifié le mien pour créer un tableau avec plus d'informations, y compris les occurences.
+
+J'aime bien les trucs ! de sorte que je travaille jusqu'à 2:00-3:00 pour réaliser ce qu'il faut faire ! So far so good. 
+
+<img src="/Users/xiaohua/Desktop/Cours/PPE/PPE1/assets/image-20221208223949546.png" alt="image-20221208223949546" style="zoom:33%;" />
+
+## 12.7	/S10
+
+J'ai soumis plusiers versions de 7/12 et de 8/12, dans lesquelles j'ai amélioré le tableau, et basé sur l'interface du prof, j'ai fait le site de notre groupe ([index.html](https://github.com/gemmafelton/PPE-group/blob/main/index.html)). En plus j'ai ajouté 3 colomns : dumps-texts et HTML et concordances. Ce que je dois faire ensuite, c'est de savoir ce que signifie le contexte et comment le tirer et l'ajouter dans le tableau. Et enfin il faut associer et aider les membres de mon groupe, travailler ensemble pour achever le projet !!
+
+<img src="/Users/xiaohua/Desktop/Cours/PPE/PPE1/assets/image-20221208223933623.png" alt="image-20221208223933623" style="zoom: 20%;" />
