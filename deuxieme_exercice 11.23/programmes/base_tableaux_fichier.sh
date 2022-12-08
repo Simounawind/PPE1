@@ -27,15 +27,18 @@ echo "<html><body>" > $fichier_tableau
 echo "<h2>Tableau $basename :</h2>" >> $fichier_tableau
 echo "<br/>" >> $fichier_tableau
 echo "<table>" >> $fichier_tableau
-echo "<tr><th>ligne</th><th>code</th><th>URL</th><th>Encodage</th><th>Concordances</th></tr>" >> $fichier_tableau
+echo "<tr><th>ligne</th><th>code</th><th>URL</th><th>Encodage</th><th></th><th>Occurences</th><th>DumpText</th><th>HTML</th><th>Contexte</th><th>Concordances</th></tr>" >> $fichier_tableau
 #<th>dump html</th><th>dumt text</th></tr>
-lineno=1;
-while read -r URL; do
+lignenum=1;
+while read -r URL || [[ -n ${URL} ]]; do
+	curl -o /Users/xiaohua/Desktop/Cours/PPE/PPE1/deuxieme_exercice\ 11.23/aspirations/fich-$lignenum.html $URL
+	w3m $URL > /Users/xiaohua/Desktop/Cours/PPE/PPE1/deuxieme_exercice\ 11.23/dumps-text/fich-$lignenum.txt
 	echo -e "\tURL : $URL";
 	# la façon attendue, sans l'option -w de cURL
 	code=$(curl -ILs $URL | grep -e "^HTTP/" | grep -Eo "[0-9]{3}" | tail -n 1)
 	charset=$(curl -Ls $URL | grep -Eo "charset=(\w|-)+" |tail | cut -d= -f2 |tail -n 1)
-	concordance=$(w3m -cookie $URL | egrep "种族歧视" -wc)
+	Occurences=$(w3m -cookie $URL | egrep "种族歧视" -wc)
+	
 
 
 	# autre façon, avec l'option -w de cURL
@@ -64,10 +67,11 @@ while read -r URL; do
 		dump=""
 		charset=""
 	fi
-	# echo "$dump" > ""fich-$lineno.txt" 
-	echo "<tr><td>$lineno</td><td>$code</td><td><a href=\"$URL\">$URL</a></td><td>$charset</td><td>$concordance</td></tr>" >> $fichier_tableau
+	# echo "$dump" > ""fich-$lignenum.txt" 
+	echo "<tr><td>$lignenum</td><td>$code</td><td><a href=\"$URL\">$URL</a></td><td>$charset</td><td>$Occurences</td><td><a href=\"../dumps-text/fich-$lignenum.txt\">text</a></td><td><a href=\"../aspirations/fich-$lignenum.html\">html</a></td><td><a href=\"../contexte/contexte-$lignenum.html\">contexte</a></td><td><a href=\"../concordances/concordance-$lignenum.html\">concordance</a></td></tr>" >> $fichier_tableau
 	echo -e "\t----------------------------------------------------------------"
-	lineno=$((lineno+1));
+	lignenum=$((lignenum+1));
 done < $fichier_urls
 echo "</table>" >> $fichier_tableau
 echo "</body></html>" >> $fichier_tableau
+

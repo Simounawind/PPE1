@@ -1,8 +1,25 @@
 #!/usr/bin/env bash
 
-
-
 #---TRAITEMENT---
+
+
+fichier_text=$1
+motif=$2
+
+
+
+if [[ $# -ne 2 ]]
+then
+	echo "Ce programme demande exactement deux arguments."
+	exit
+fi
+
+if [[ ! -f $fichier_text ]]
+then
+  echo "le fichier $fichier_text n'existe pas"
+  exit
+fi
+  
 echo "
 <!DOCTYPE html>
 <html>
@@ -24,16 +41,9 @@ echo "
 				<tbody>
 " > sorti.html
 
-i=1
-cible="种族歧视"
-while ((i <= 52))
-do
-    dossier=fich-$i.txt
-	echo "$dossier"
-	egrep -o "(\w|\W){0,10}($cible)(\W|\w){0,10}" $dossier | sed -E "s/(.*)($cible)(.*)/<tr><td class=\"has-text-centered\">\1<\/td><td class=\"has-text-centered\"><strong>\2<\/strong><\/td><td <td class=\"has-text-centered\">\3<\/td><\/tr>/" >> sorti.html
-    i=$((i+1));
-done
-exit
+grep -E -o "(\w+|\W+){0,10}$motif(\W+|\w+){0,10}" $fichier_text |sort|uniq | sed -E "s/(.*)($motif)(.*)/<tr><td>\1<\/td><td><strong>\2<\/strong><\/td><td>\3<\/td><\/tr>/" >> sorti.html
+
+
 
 echo "
 </tbody>
@@ -41,7 +51,3 @@ echo "
 </body>
 </html>
 " >> sorti.html
-
-
-#
-
