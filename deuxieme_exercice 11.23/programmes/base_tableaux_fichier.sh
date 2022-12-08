@@ -27,7 +27,18 @@ echo "<html><body>" > $fichier_tableau
 echo "<h2>Tableau $basename :</h2>" >> $fichier_tableau
 echo "<br/>" >> $fichier_tableau
 echo "<table>" >> $fichier_tableau
-echo "<tr><th>ligne</th><th>code</th><th>URL</th><th>Encodage</th><th></th><th>Occurences</th><th>DumpText</th><th>HTML</th><th>Contexte</th><th>Concordances</th></tr>" >> $fichier_tableau
+echo "<tr>
+	<th>ligne</th>
+	<th>code</th>
+	<th>URL</th>
+	<th>Encodage</th>
+	<th></th>
+	<th>Occurences</th>
+	<th>DumpText</th>
+	<th>HTML</th>
+	<th>Contexte</th>
+	<th>Concordances</th>
+	</tr>" >> $fichier_tableau
 #<th>dump html</th><th>dumt text</th></tr>
 lignenum=1;
 while read -r URL || [[ -n ${URL} ]]; do
@@ -68,7 +79,16 @@ while read -r URL || [[ -n ${URL} ]]; do
 		charset=""
 	fi
 	# echo "$dump" > ""fich-$lignenum.txt" 
-	echo "<tr><td>$lignenum</td><td>$code</td><td><a href=\"$URL\">$URL</a></td><td>$charset</td><td>$Occurences</td><td><a href=\"../dumps-text/fich-$lignenum.txt\">text</a></td><td><a href=\"../aspirations/fich-$lignenum.html\">html</a></td><td><a href=\"../contexte/contexte-$lignenum.html\">contexte</a></td><td><a href=\"../concordances/concordance-$lignenum.html\">concordance</a></td></tr>" >> $fichier_tableau
+	echo "<tr>
+	<td>$lignenum</td>
+	<td>$code</td>
+	<td><a href=\"$URL\">$URL</a></td>
+	<td>$charset</td><td>$Occurences</td>
+	<td><a href=\"https://htmlpreview.github.io/?https://github.com/Simounawind/PPE1/blob/main/deuxieme_exercice%2011.23/dumps-text/fich-$lignenum.txt\">text</a></td>
+	<td><a href=\"https://htmlpreview.github.io/?https://github.com/Simounawind/PPE1/blob/main/deuxieme_exercice%2011.23/aspirations/fich-$lignenum.html\">html</a></td>
+	<td><a href=\"../contexte/contexte-$lignenum.html\">contexte</a></td>
+	<td><a href=\"https://htmlpreview.github.io/?https://github.com/Simounawind/PPE1/blob/main/deuxieme_exercice%2011.23/concordances/concordance-$lignenum.html\">concordance</a></td>
+	</tr>" >> $fichier_tableau
 	echo -e "\t----------------------------------------------------------------"
 	lignenum=$((lignenum+1));
 done < $fichier_urls
