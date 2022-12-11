@@ -15,8 +15,9 @@ lignenum=1;
 fich=$(basename -s .txt $fichier_urls)
 while read URL || [[ -n $URL ]];
 do
-	curl -o /Users/xiaohua/Desktop/Cours/PPE/PPE1/deuxieme_exercice\ 11.23/aspirations/fich-$lignenum.html $URL
-	w3m $URL > /Users/xiaohua/Desktop/Cours/PPE/PPE1/deuxieme_exercice\ 11.23/dumps-text/fich-$lignenum.txt
+	curl -o ./aspirations/fich-$lignenum.html $URL
+	w3m $URL > ./dumps-text/fich-$lignenum.txt
+	grep -E -A3 -B3 "(\w+|\W+)+种族歧视(\W+|\w+)+" ./dumps-text/fich-$lignenum.txt > ./contexte/fich-$lignenum.txt
 	lignenum=$((lignenum+1));
 
 done < $fichier_urls

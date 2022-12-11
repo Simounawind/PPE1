@@ -86,7 +86,7 @@ while read -r URL || [[ -n ${URL} ]]; do
 	<td>$charset</td><td>$Occurences</td>
 	<td><a href=\"https://htmlpreview.github.io/?https://github.com/Simounawind/PPE1/blob/main/deuxieme_exercice%2011.23/dumps-text/fich-$lignenum.txt\">text</a></td>
 	<td><a href=\"https://htmlpreview.github.io/?https://github.com/Simounawind/PPE1/blob/main/deuxieme_exercice%2011.23/aspirations/fich-$lignenum.html\">html</a></td>
-	<td><a href=\"../contexte/contexte-$lignenum.html\">contexte</a></td>
+	<td><a href=\"../contexte/fich-$lignenum.txt\">contexte</a></td>
 	<td><a href=\"https://htmlpreview.github.io/?https://github.com/Simounawind/PPE1/blob/main/deuxieme_exercice%2011.23/concordances/concordance-$lignenum.html\">concordance</a></td>
 	</tr>" >> $fichier_tableau
 	echo -e "\t----------------------------------------------------------------"

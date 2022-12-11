@@ -926,34 +926,34 @@
     <ul>
         
             <li class="rec_topics">
-                    <a href="https://www.douban.com/gallery/topic/3373553/?from=hot_topic_note" class="rec_topics_name">2023读书计划</a>
+                    <a href="https://www.douban.com/gallery/topic/3373820/?from=hot_topic_note" class="rec_topics_name">我的独居饮食记录</a>
                     
-                    <span class="rec_topics_subtitle">新话题 · 1.7万次浏览</span>
+                    <span class="rec_topics_subtitle">30.9万次浏览</span>
             </li>
             <li class="rec_topics">
-                    <a href="https://www.douban.com/gallery/topic/3372842/?from=hot_topic_note" class="rec_topics_name">你至今还想不通的一件事是什么？</a>
+                    <a href="https://www.douban.com/gallery/topic/553/?from=hot_topic_note" class="rec_topics_name">看展记</a>
                     
-                    <span class="rec_topics_subtitle">7.2万次浏览</span>
-            </li>
-            <li class="rec_topics">
-                    <a href="https://www.douban.com/gallery/topic/3373243/?from=hot_topic_note" class="rec_topics_name">我的2022年度观影总结</a>
-                    
-                    <span class="rec_topics_subtitle">1.1万次浏览</span>
-            </li>
-            <li class="rec_topics">
-                    <a href="https://www.douban.com/gallery/topic/3373285/?from=hot_topic_note" class="rec_topics_name">我的2022年度摄影总结</a>
-                    
-                    <span class="rec_topics_subtitle">3.9万次浏览</span>
-            </li>
-            <li class="rec_topics">
-                    <a href="https://www.douban.com/gallery/topic/3372851/?from=hot_topic_note" class="rec_topics_name">你的植物们安全过冬了吗？</a>
-                    
-                    <span class="rec_topics_subtitle">5369次浏览</span>
+                    <span class="rec_topics_subtitle">1.1亿次浏览</span>
             </li>
             <li class="rec_topics">
                     <a href="https://www.douban.com/gallery/topic/3372674/?from=hot_topic_note" class="rec_topics_name">哪个瞬间你决定要改变自己</a>
                     
-                    <span class="rec_topics_subtitle">新话题 · 3.2万次浏览</span>
+                    <span class="rec_topics_subtitle">15.5万次浏览</span>
+            </li>
+            <li class="rec_topics">
+                    <a href="https://www.douban.com/gallery/topic/3373243/?from=hot_topic_note" class="rec_topics_name">我的2022年度观影总结</a>
+                    
+                    <span class="rec_topics_subtitle">2.8万次浏览</span>
+            </li>
+            <li class="rec_topics">
+                    <a href="https://www.douban.com/gallery/topic/3373553/?from=hot_topic_note" class="rec_topics_name">2023读书计划</a>
+                    
+                    <span class="rec_topics_subtitle">14.4万次浏览</span>
+            </li>
+            <li class="rec_topics">
+                    <a href="https://www.douban.com/gallery/topic/3372685/?from=hot_topic_note" class="rec_topics_name">我的2022年音乐报告</a>
+                    
+                    <span class="rec_topics_subtitle">58.6万次浏览</span>
             </li>
     </ul>
 </div>
@@ -1021,7 +1021,40 @@
     </div>
     
 
-    <script type="text/javascript" src="https://img1.doubanio.com/misc/mixed_static/433ae2ed3be603a9.js"></script><script type="text/javascript">
+    <script type="text/javascript" src="https://img1.doubanio.com/misc/mixed_static/5f869e53a99a1f2a.js"></script><script type="text/javascript">
+        Do(function(){
+            function deferred(){var t={done:[],fail:[]},o={done:function(i){return t.done.push(i),o},fail:function(i){return t.fail.push(i),o}};return{resolve:function(){for(var o,i=0;o=t.done[i++];)o.apply(this,arguments)},reject:function(){for(var o,i=0;o=t.fail[i++];)o.apply(this,arguments)},promise:o}}function asyncRequest(t,o,i){var e=deferred(),d=null,a=(i||"get").toLowerCase();return d=$.ajax({url:t,type:a,dataType:"json",data:"post"===a?$.extend(o,{ck:get_cookie("ck")}):o,error:function(t){e.reject(t)},success:function(t){e.resolve(t)}}),e.promise.abort=function(){d&&d.abort()},e.promise}var DOULIST_ADDITEM="/j/doulist/{doulist_id}/additem",DOULIST_EDITITEM="/j/doulist/{doulist_id}/edititem",DOULIST_COMMENT="/j/doulist/{doulist_id}/poke",DOULIST_CREATE="/j/doulist/add",DOULIST_LIST="/j/doulist/cat",DOULIST_SEARCH="/j/doulist/search",DOULIST_SEARCH_SELF="/j/doulist/search_user_doulists",DOULIST_GET_ITEM_INFO="/j/doulist/get_item_info",addTooltipToDoulistBtn=function(t){if(get_cookie("ck")){var o=/^https?:\/\/\w+\.douban\.com\/link2\/\?url=(\S+)$/i,i=function(t){var i=t.match(o);return i?decodeURIComponent(i[1]):t};$(document).delegate(".url-doulist-add","click",function(t){t.preventDefault();var o,e=$(this),d=i(e.data("url")),a=dui.Dialog({title:"添加到豆列",width:640,cls:"dialog-doulist dialog-tooltip-loading",content:'<div class="tooltip-text">内容加载中<i class="tooltip-loading-icon"></i></div>'}).open();a.node.find(".dui-dialog-close").click(function(t){o&&o.abort()}),o=asyncRequest(DOULIST_GET_ITEM_INFO,{url:d},"post").done(function(t){return t.r?void a.node.find(".tooltip-text").text(t.error):(t.cate=(t.kind||"")+"",t.picture="string"==typeof t.images?t.images:t.images&&t.images[0]||"",t.id=(t.id||"")+"",a.close(),void e.doulistDialog(t))}).fail(function(t){a.node.find(".tooltip-text").text("失败啦！再试一次吧")})});var e=85,d=!1,a="doulist-tooltip-hide",n=$('<div class="doulist-add-tooltip"><a class="url-doulist-add" ><i></i> 添加到豆列</a><div class="arrow"></div></div>'),s=n.find("a");n.addClass(a),n.appendTo($("body"));var l=function(t){d=setTimeout(function(){n.addClass(a)},e)};$(t).mouseenter(function(t){var o=$(this);n.css({top:o.offset().top-28,left:t.pageX-42}),s.data("url",o.attr("href")),clearTimeout(d),n.removeClass(a)}).mouseleave(l),n.mouseenter(function(){clearTimeout(d)}).mouseleave(l)}};
+            var $regUp = $('#reg-up');
+            if ($regUp.length) {
+                $regUp.find('.lnk-show-reg').trigger('click');
+            }
+            addTooltipToDoulistBtn('.note a[rel=nofollow]');
+        });
+
+        Do('https://img1.doubanio.com/f/sns/1aa854b8a19719196b0a4f902e51dcbbbdb95e1b/js/sns/note/ng/runtime.js', function() {
+            // 渲染 gif
+            if ('_IMAGE_GIF_RENDER' in window) {
+                window._IMAGE_GIF_RENDER({
+                    preloadNum: 3,
+                    type: 'video',
+                    download: false
+                });
+            }
+            // 渲染 quiz card
+            if ('_QUIZ_RENDER' in window) {
+                window._QUIZ_RENDER({
+                    source_id: '723578701'
+                })
+            }
+        });
+
+        $(window).bind('load', function(){
+            !function(e){function t(r){if(n[r])return n[r].exports;var i=n[r]={i:r,l:!1,exports:{}};return e[r].call(i.exports,i,i.exports,t),i.l=!0,i.exports}var n={};t.m=e,t.c=n,t.d=function(e,n,r){t.o(e,n)||Object.defineProperty(e,n,{configurable:!1,enumerable:!0,get:r})},t.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(n,"a",n),n},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="/static/",t(t.s=0)}([function(e,t,n){n(1),e.exports=n(2)},function(e,t){},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=n(3);n.n(r),jQuery.extend(jQuery.easing,{easeOutCubic:function(e,t,n,r,i){return t=t/i-1,r*t*t*t+r+n}});var i=$(window),o="dou-preview-image",a=$('<div class="dou-preview-image-popup"></div>').hide().appendTo("body"),s=$('<a href="#" class="dou-preview-image-link-open" target="_preview_img"></a>').hide().appendTo("body"),u=null,c=null,f=!1,l=void 0,p=void 0,d=void 0,h=void 0,v=void 0,g=void 0,m=function(){c&&!f&&(f=!0,a.hide(),s.hide(),c.animate({left:l[0],top:l[1],width:d,height:h},200,"easeOutCubic",function(){u.css("visibility","visible"),c.remove(),c=null,f=!1}))},b=function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:10,n=void 0;return function(){n&&clearTimeout(n),n=setTimeout(e,t)}};a.bind("click",function(){return m()}),i.bind("resize",b(function(){m()},0)).bind("scroll",b(function(){m()}));var w=function(e){if(e){d=e.width(),h=e.height();var t=d/h,n=e.offset();v=Math.min(e[0].naturalWidth||d,i.width()),g=Math.min(v/t,i.height()),v=g*t,l=[n.left,n.top],p=[i.scrollLeft()+(i.width()-v)/2,i.scrollTop()+(i.height()-g)/2],u=e.css("visibility","hidden"),c=$('<img class="dou-preview-image-popup-image">').attr({src:e.attr("src")}).css({left:l[0],top:l[1],width:d,height:h}).bind("click",function(){return m()}).appendTo("body"),a.css({top:i.scrollTop(),height:i.height()}).fadeIn(300),s.css({top:20,right:20}).attr({href:e.attr("src").replace("/l/","/raw/")}).fadeIn(100),c.animate({left:p[0],top:p[1],width:v,height:g},250,"easeOutCubic")}},y=function(e){e&&(e.bind("load",function(e){var t=$(e.target);t.width()<600||0===t.height()||t.addClass(o).addClass("dou-preview-image-zoom-in").bind("click",function(e){e.preventDefault(),w(t)})}),e.attr("src",e.attr("src")),e=null)};"previewImageSetup"in window&&window.previewImageSetup(function(e){e&&0!==e.length&&e.each(function(e,t){return y($(t))})})},function(e,t,n){var r=n(4);"string"==typeof r&&(r=[[e.i,r,""]]);var i={hmr:!0};i.transform=void 0,n(6)(r,i),r.locals&&(e.exports=r.locals)},function(e,t,n){t=e.exports=n(5)(void 0),t.push([e.i,".dou-preview-image-zoom-in{cursor:zoom-in}.dou-preview-image-link-open{position:fixed;z-index:12;width:14px;height:14px}.dou-preview-image-link-open:link,.dou-preview-image-link-open:visited{background:transparent url(\"data:image/svg+xml;charset=utf-8,%3Csvg width='14' height='14' viewBox='-1 -1 15 15' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.05 0H1.613S1.144.035.796.41C.447.782.454 1.3.454 1.3L.417 11.815s.014.502.33.843c.316.342.747.342.747.342h10.28s.484-.043.748-.417c.264-.373.256-.823.256-.823V8.848m-7.883-.736L12.634.134M7.8 0h4.91v4.867' stroke='%23aaa' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E\") no-repeat;opacity:.6}.dou-preview-image-link-open:active,.dou-preview-image-link-open:hover{opacity:1;background-color:transparent}.dou-preview-image-popup{position:absolute;z-index:10;top:0;height:400px;left:0;right:0;background-color:#fff}.dou-preview-image-popup-image{position:absolute;z-index:11;cursor:zoom-out}",""])},function(e,t){function n(e,t){var n=e[1]||"",i=e[3];if(!i)return n;if(t&&"function"==typeof btoa){var o=r(i);return[n].concat(i.sources.map(function(e){return"/*# sourceURL="+i.sourceRoot+e+" */"})).concat([o]).join("\n")}return[n].join("\n")}function r(e){return"/*# sourceMappingURL=data:application/json;charset=utf-8;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(e))))+" */"}e.exports=function(e){var t=[];return t.toString=function(){return this.map(function(t){var r=n(t,e);return t[2]?"@media "+t[2]+"{"+r+"}":r}).join("")},t.i=function(e,n){"string"==typeof e&&(e=[[null,e,""]]);for(var r={},i=0;i<this.length;i++){var o=this[i][0];"number"==typeof o&&(r[o]=!0)}for(i=0;i<e.length;i++){var a=e[i];"number"==typeof a[0]&&r[a[0]]||(n&&!a[2]?a[2]=n:n&&(a[2]="("+a[2]+") and ("+n+")"),t.push(a))}},t}},function(e,t,n){function r(e,t){for(var n=0;n<e.length;n++){var r=e[n],i=h[r.id];if(i){i.refs++;for(var o=0;o<i.parts.length;o++)i.parts[o](r.parts[o]);for(;o<r.parts.length;o++)i.parts.push(f(r.parts[o],t))}else{for(var a=[],o=0;o<r.parts.length;o++)a.push(f(r.parts[o],t));h[r.id]={id:r.id,refs:1,parts:a}}}}function i(e,t){for(var n=[],r={},i=0;i<e.length;i++){var o=e[i],a=t.base?o[0]+t.base:o[0],s=o[1],u=o[2],c=o[3],f={css:s,media:u,sourceMap:c};r[a]?r[a].parts.push(f):n.push(r[a]={id:a,parts:[f]})}return n}function o(e,t){var n=g(e.insertInto);if(!n)throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");var r=w[w.length-1];if("top"===e.insertAt)r?r.nextSibling?n.insertBefore(t,r.nextSibling):n.appendChild(t):n.insertBefore(t,n.firstChild),w.push(t);else if("bottom"===e.insertAt)n.appendChild(t);else{if("object"!=typeof e.insertAt||!e.insertAt.before)throw new Error("[Style Loader]\n\n Invalid value for parameter 'insertAt' ('options.insertAt') found.\n Must be 'top', 'bottom', or Object.\n (https://github.com/webpack-contrib/style-loader#insertat)\n");var i=g(e.insertInto+" "+e.insertAt.before);n.insertBefore(t,i)}}function a(e){if(null===e.parentNode)return!1;e.parentNode.removeChild(e);var t=w.indexOf(e);t>=0&&w.splice(t,1)}function s(e){var t=document.createElement("style");return e.attrs.type="text/css",c(t,e.attrs),o(e,t),t}function u(e){var t=document.createElement("link");return e.attrs.type="text/css",e.attrs.rel="stylesheet",c(t,e.attrs),o(e,t),t}function c(e,t){Object.keys(t).forEach(function(n){e.setAttribute(n,t[n])})}function f(e,t){var n,r,i,o;if(t.transform&&e.css){if(!(o=t.transform(e.css)))return function(){};e.css=o}if(t.singleton){var c=b++;n=m||(m=s(t)),r=l.bind(null,n,c,!1),i=l.bind(null,n,c,!0)}else e.sourceMap&&"function"==typeof URL&&"function"==typeof URL.createObjectURL&&"function"==typeof URL.revokeObjectURL&&"function"==typeof Blob&&"function"==typeof btoa?(n=u(t),r=d.bind(null,n,t),i=function(){a(n),n.href&&URL.revokeObjectURL(n.href)}):(n=s(t),r=p.bind(null,n),i=function(){a(n)});return r(e),function(t){if(t){if(t.css===e.css&&t.media===e.media&&t.sourceMap===e.sourceMap)return;r(e=t)}else i()}}function l(e,t,n,r){var i=n?"":r.css;if(e.styleSheet)e.styleSheet.cssText=x(t,i);else{var o=document.createTextNode(i),a=e.childNodes;a[t]&&e.removeChild(a[t]),a.length?e.insertBefore(o,a[t]):e.appendChild(o)}}function p(e,t){var n=t.css,r=t.media;if(r&&e.setAttribute("media",r),e.styleSheet)e.styleSheet.cssText=n;else{for(;e.firstChild;)e.removeChild(e.firstChild);e.appendChild(document.createTextNode(n))}}function d(e,t,n){var r=n.css,i=n.sourceMap,o=void 0===t.convertToAbsoluteUrls&&i;(t.convertToAbsoluteUrls||o)&&(r=y(r)),i&&(r+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(i))))+" */");var a=new Blob([r],{type:"text/css"}),s=e.href;e.href=URL.createObjectURL(a),s&&URL.revokeObjectURL(s)}var h={},v=function(e){var t;return function(){return void 0===t&&(t=e.apply(this,arguments)),t}}(function(){return window&&document&&document.all&&!window.atob}),g=function(e){var t={};return function(n){if(void 0===t[n]){var r=e.call(this,n);if(r instanceof window.HTMLIFrameElement)try{r=r.contentDocument.head}catch(e){r=null}t[n]=r}return t[n]}}(function(e){return document.querySelector(e)}),m=null,b=0,w=[],y=n(7);e.exports=function(e,t){if("undefined"!=typeof DEBUG&&DEBUG&&"object"!=typeof document)throw new Error("The style-loader cannot be used in a non-browser environment");t=t||{},t.attrs="object"==typeof t.attrs?t.attrs:{},t.singleton||(t.singleton=v()),t.insertInto||(t.insertInto="head"),t.insertAt||(t.insertAt="bottom");var n=i(e,t);return r(n,t),function(e){for(var o=[],a=0;a<n.length;a++){var s=n[a],u=h[s.id];u.refs--,o.push(u)}e&&r(i(e,t),t);for(var a=0;a<o.length;a++){var u=o[a];if(0===u.refs){for(var c=0;c<u.parts.length;c++)u.parts[c]();delete h[u.id]}}}};var x=function(){var e=[];return function(t,n){return e[t]=n,e.filter(Boolean).join("\n")}}()},function(e,t){e.exports=function(e){var t="undefined"!=typeof window&&window.location;if(!t)throw new Error("fixUrls requires window.location");if(!e||"string"!=typeof e)return e;var n=t.protocol+"//"+t.host,r=n+t.pathname.replace(/\/[^\/]*$/,"/");return e.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi,function(e,t){var i=t.trim().replace(/^"(.*)"$/,function(e,t){return t}).replace(/^'(.*)'$/,function(e,t){return t});if(/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/)/i.test(i))return e;var o;return o=0===i.indexOf("//")?i:0===i.indexOf("/")?n+i:r+i.replace(/^\.\//,""),"url("+JSON.stringify(o)+")"})}}]);
+        })
+        window.previewImageSetup = function(viewer) {
+            viewer($('.image-wrapper img'));
+        };
+    </script><script type="text/javascript" src="https://img1.doubanio.com/misc/mixed_static/654a7f0c1db47c53.js"></script><script type="text/javascript">
     (function(){
         window.collect_target = {
             tkind: "1015",
@@ -1057,7 +1090,7 @@
             existingNode = global.document.getElementsByTagName('script')[0],
             adSource = '//erebor.douban.com/',
             userId = '',
-            browserId = 'uvetaAxN8Fc',
+            browserId = 'zhHs6BXk5bo',
             criteria = '3:/note/723578701/',
             preview = '',
             debug = false,
@@ -1129,8 +1162,8 @@
 
       function changeUrl() {
         var prev = ''.split(',').pop();
-        var tt = '1670509945'.slice(3, 10);
-        var bid = 'uvetaAxN8Fc'.slice(0, 7);
+        var tt = '1670769156'.slice(3, 10);
+        var bid = 'zhHs6BXk5bo'.slice(0, 7);
         var message = tt + bid;
         var chain = prev ? [prev, message].join(',') : message;
 
@@ -1228,7 +1261,7 @@ if (window.addEventListener) {
 
 
 
-    <!-- dae-web-sns--note-b7767c7c-xznl7-->
+    <!-- dae-web-sns--note-866b6cf865-86lbt-->
 
   
 
