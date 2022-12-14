@@ -42,8 +42,8 @@ echo "<tr>
 #<th>dump html</th><th>dumt text</th></tr>
 lignenum=1;
 while read -r URL || [[ -n ${URL} ]]; do
-	curl -o /Users/xiaohua/Desktop/Cours/PPE/PPE1/deuxieme_exercice\ 11.23/aspirations/fich-$lignenum.html $URL
-	w3m $URL > /Users/xiaohua/Desktop/Cours/PPE/PPE1/deuxieme_exercice\ 11.23/dumps-text/fich-$lignenum.txt
+	curl -o ../aspirations/cn-$lignenum.html $URL
+	w3m $URL > ../dumps-text/cn-$lignenum.txt
 	echo -e "\tURL : $URL";
 	# la façon attendue, sans l'option -w de cURL
 	code=$(curl -ILs $URL | grep -e "^HTTP/" | grep -Eo "[0-9]{3}" | tail -n 1)
@@ -78,16 +78,16 @@ while read -r URL || [[ -n ${URL} ]]; do
 		dump=""
 		charset=""
 	fi
-	# echo "$dump" > ""fich-$lignenum.txt" 
+	# echo "$dump" > ""cn-$lignenum.txt" 
 	echo "<tr>
 	<td>$lignenum</td>
 	<td>$code</td>
 	<td><a href=\"$URL\">$URL</a></td>
 	<td>$charset</td><td>$Occurences</td>
-	<td><a href=\"https://htmlpreview.github.io/?https://github.com/Simounawind/PPE1/blob/main/deuxieme_exercice%2011.23/dumps-text/fich-$lignenum.txt\">text</a></td>
-	<td><a href=\"https://htmlpreview.github.io/?https://github.com/Simounawind/PPE1/blob/main/deuxieme_exercice%2011.23/aspirations/fich-$lignenum.html\">html</a></td>
-	<td><a href=\"../contexte/fich-$lignenum.txt\">contexte</a></td>
-	<td><a href=\"https://htmlpreview.github.io/?https://github.com/Simounawind/PPE1/blob/main/deuxieme_exercice%2011.23/concordances/concordance-$lignenum.html\">concordance</a></td>
+	<td><a href=\"../dumps-text/cn-$lignenum.txt\">text</a></td>
+	<td><a href=\"../aspirations/cn-$lignenum.html\">html</a></td>
+	<td><a href=\"../contexte/cn-$lignenum.txt\">contexte</a></td>
+	<td><a href=\"../concordances/cn-$lignenum.html\">concordance</a></td>
 	</tr>" >> $fichier_tableau
 	echo -e "\t----------------------------------------------------------------"
 	lignenum=$((lignenum+1));
