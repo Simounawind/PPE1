@@ -16,20 +16,19 @@ fi
 folder=$1    #dumptext dossier
 basename=$2     # en, fr, ru, pl, it, jp, etc ......
 
-echo "<lang=\"$basename\">" > "itrameur/$folder-$lang.txt"     # folder c'est dumptext    "itrameur/$contexte-$lang.txt" 
+echo "<lang=\"$basename\">" > "itrameur/$folder-$basename.txt"     # folder c'est dumptext    "itrameur/$contexte-$lang.txt" 
 
 for filepath in $(ls $folder/$basename-*.txt)
 do
     # filepath == dumps-text/fr-1.txt
     #  == > pagename =fr-1
     pagename="$(basename -s .txt $filepath)"
-
     echo "<page=\"$pagename\">" >> "itrameur/$folder-$basename.txt"
     echo "<text>" >> "itrameur/$folder-$basename.txt"
 
     #on récupère les dumps ou contextes
     # et on écrit à l'intérieur de la base text
-    content = $(cat $filepath)
+    content=$(cat $filepath)
     # ordre important : & en premier
     # sinon : < => &lt ; => &amp;lt: 
     content=$(echo "$content" | sed 's/&/&amp;/g')
@@ -40,5 +39,6 @@ do
 
     echo "</text>" >> "itrameur/$folder-$basename.txt"
     echo "</page> §" >> "itrameur/$folder-$basename.txt"
-    echo "</lang>" >> "itrameur/$folder-$basename.txt"
 done
+echo "</lang>" >> "itrameur/$folder-$basename.txt"     # folder c'est dumptext    "itrameur/$contexte-$lang.txt" 
+
