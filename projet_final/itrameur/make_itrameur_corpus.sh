@@ -6,7 +6,6 @@ then
     exit
 fi
 
-
 dossier=$1
 langue_abr=$2     # en, fr, ru, pl, it, jp, etc ......
 
