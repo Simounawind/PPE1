@@ -1,30 +1,31 @@
+
 import jieba
-# module for Chinese word segmentation
 
-text_from_file = open('dumps.txt', 'r', encoding='utf-8')
-data = text_from_file.read()
-jieba.load_userdict("userdict.txt")
-seg_list = jieba.cut(data, cut_all=False)
 
-fW = open('corpus-ch_itrameur.txt', 'w', encoding='utf-8')
-fW.write(' '.join(seg_list))
-# put result in new file, separate tokens by space
+#jieba.load_userdict('userdict.txt') mais marche pas
+# 创建停用词list
+def stopwordslist(filepath):
+    stopwords = [line.strip() for line in open(filepath, 'r', encoding='utf-8').readlines()]
+    return stopwords
 
-text_from_file.close()
-fW.close()
 
-# trouver les stopwords et les remplacer avec space
-mixed = open('corpus-ch_itrameur.txt', encoding='utf-8')
-stopwords = {}.fromkeys([line.rstrip() for line in open(
-    r'stop_words.txt', encoding='utf-8')])
-for line in mixed:
-    segs = jieba.cut(line, cut_all=False)
-    list = []
-    for seg in segs:
-        if seg not in stopwords:
-            list.append(seg)
-mixed.close()
+# 对句子进行分词
+def seg_sentence(sentence):
+    sentence_seged = jieba.cut(sentence.strip())
+    stopwords = stopwordslist('stop_words.txt')  # 这里加载停用词的路径
+    outstr = ''
+    for word in sentence_seged:
+        if word not in stopwords:
+            if word != '\t':
+                outstr += word
+                outstr += " "
+    return outstr
 
-final = open('stop_words.txt', 'w+', encoding='utf-8')
-final.write(' '.join(list))
-final.close()
+
+inputs = open('dumps.txt', 'r', encoding='utf-8')
+outputs = open('corpus-ch_itrameur_final.txt', 'w')
+for line in inputs:
+    line_seg = seg_sentence(line)  # 这里的返回值是字符串
+    outputs.write(line_seg + '\n')
+outputs.close()
+inputs.close()
