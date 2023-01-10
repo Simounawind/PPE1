@@ -128,3 +128,15 @@ Environs 10 commits pendant cette période, j'ai appris CSS et l'application de 
 ## 1/4/2023        /S13
 
 L'ensemble du dépôt git a été réorganisé dans un cadre basé sur les suggestions du groupe et de l'enseignant, de sorte que certaines informations sur les scripts, les listes et les sites Web ont été modifiés en conséquence.
+
+
+
+
+
+
+
+## 1/10/2023        /S13
+
+En 3 jours, j'ai fait la création de la page web pour le groupe et j'ai un peu modifié le script pour la création du corpus iTrameur et Nuages des mots. Aussi, pour les scripts, je les ai partagé avec d'autres.
+
+C'est probablement la fin et j'aime ce cours.
