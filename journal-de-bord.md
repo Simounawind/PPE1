@@ -137,6 +137,6 @@ L'ensemble du dépôt git a été réorganisé dans un cadre basé sur les sugge
 
 ## 1/10/2023        /S13
 
-En 3 jours, j'ai fait la création de la page web pour le groupe et j'ai un peu modifié le script pour la création du corpus iTrameur et Nuages des mots. Aussi, pour les scripts, je les ai partagé avec d'autres.
+J'ai réalisé la création des page web du groupe, et les deux autres membres ont ainsi fini avec les sites de versions fr et en. Aussi j'ai un peu modifié le script pour la création du corpus iTrameur et Nuages des mots. 
 
 C'est probablement la fin et j'aime ce cours.
